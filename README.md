@@ -9,3 +9,5 @@ Podeu marcar i desmarcar per pujar sol el que us interessi.
 Sol es modificará el que estigui marcat el blau!
 Assegureu-vos que està tot correcte i poseu un comentari dient quins canvis heu fet o quins documents heu afegit. 
 Ho ha de poder entendre tothom!
+
+asdakdja
