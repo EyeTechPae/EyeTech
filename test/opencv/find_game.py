@@ -15,7 +15,7 @@ mask = cv2.inRange(image, lower, upper)
 # find contours in the masked image and keep the largest one
 (_, cnts, _) = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 c = max(cnts, key=cv2.contourArea)
-print (c) 
+
 # approximate the contour
 peri = cv2.arcLength(c, True)
 approx = cv2.approxPolyDP(c, 0.05 * peri, True)
