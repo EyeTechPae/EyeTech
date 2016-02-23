@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# script de prueba de un blog
+
 # import the necessary packages
 import numpy as np
 import cv2
