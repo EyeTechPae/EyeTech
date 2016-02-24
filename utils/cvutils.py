@@ -28,12 +28,8 @@ def rec_dilate_step (mark, ker):
     return mark
 
 def rec_limit_step (src, mark):
-    # WARNING: Lento
-    # no me se la sintaxis par hacer esto con python. Es TEMPORAL
-    for row in range(128):
-        for col in range(128):
-            if mark.item(row, col) > src.item(row, col):
-                mark[row, col] = src[row, col]
+    mask = mark > src
+    mark[mask] = src[mask]
     return mark
 
 def hello (src, mark, ker):
