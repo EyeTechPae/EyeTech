@@ -22,5 +22,5 @@ approx = cv2.approxPolyDP(c, 0.05 * peri, True)
  
 # draw a green bounding box surrounding the red game
 cv2.drawContours(image, [approx], -1, (0, 255, 0), 4)
-cv2.imwrite("Image.png", image)
+cv2.imwrite("Image", image)
 cv2.waitKey(0)
