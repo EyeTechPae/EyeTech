@@ -19,6 +19,7 @@ $ sudo apt-get install git
 Clonar repositori
 ```
 $ git clone https://github.com/EyeTechPae/EyeTech.git
+$ cd EyeTech/
 ```
 
 Crear arxiu
