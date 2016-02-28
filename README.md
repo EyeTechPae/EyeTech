@@ -25,7 +25,7 @@ $ cd EyeTech/
 Crear arxiu
 ```
 $ touch hello.txt
-$ git add hello.txt
+$ git add hello.txt # fa que git "monitoritzi" el fitxer
 ```
 
 Salvar canvis en el repositori
@@ -35,7 +35,7 @@ $ git commit -m "mensaje minimamente descriptivo"
 
 Actualitzar repositori remot (github)
 ```
-$ git push
+$ git push # es publiquen els canvis en la branca "master" en cas de que no hi hagi discrepancies
 ```
 
 
