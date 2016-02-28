@@ -1,4 +1,4 @@
-# Github GUI
+## Github GUI
 1. Per a tenir-ho tot sincronitzat cada cop que us fiqueu a treballar el codi
 2. Feu un sync desde la applicació desktop per a que es descarreguin els darrers canvis al vostre PC
 3. A l'apartat history veureu l'historial de canvis que ha pujat la gent
@@ -10,7 +10,7 @@
 9. Assegureu-vos que està tot correcte i poseu un comentari dient quins canvis heu fet o quins documents heu afegit 
 10. Ho ha de poder entendre tothom!
 
-# Git
+## Git
 Instal·lar git (Ubuntu)
 ```
 $ sudo apt-get install git
@@ -19,6 +19,22 @@ $ sudo apt-get install git
 Clonar repositori
 ```
 $ git clone https://github.com/EyeTechPae/EyeTech.git
+```
+
+Crear arxiu
+```
+$ touch hello.txt
+$ git add hello.txt
+```
+
+Salvar canvis en el repositori
+```
+$ git commit -m "mensaje minimamente descriptivo"
+```
+
+Actualitzar repositori remot (github)
+```
+$ git push
 ```
 
 
