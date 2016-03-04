@@ -8,7 +8,7 @@ class ServerHandler (BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html; charset=utf-8')
         self.send_header('Allow', 'GET, POST')
         self.end_headers()
-        self.wfile.write(b'<link rel="icon" href="data:;base64,="><form method="POST"><input name="data" type="text"/><button>compute</button></form>')
+        self.wfile.write(b'<form method="POST"><input name="data" type="text"/><button>compute</button></form>')
 
     def do_POST(self):
         post_vars = {}
