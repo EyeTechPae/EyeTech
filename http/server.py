@@ -4,10 +4,10 @@ class ServerHandler (BaseHTTPRequestHandler):
     
     def do_GET(self):
         self.send_response(200, 'OK')
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'text/html; charset=utf-8')
         self.send_header('Connection', 'close')
         self.end_headers()
-        self.wfile.write(b'Hello <b>World!</b>')
+        self.wfile.write(b'<i>Hello</i> <b>World</b>')
 
 if __name__ == '__main__':
     try:
