@@ -14,7 +14,7 @@ frame = cv2.imread(path)
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 lap = cv2.Laplacian(gray, cv2.CV_64F)
 gray = np.double(gray)
-gray = cv2.addWeighted(gray, 1, lap, -0.7, 0)
+gray = cv2.addWeighted(gray, 1, lap, -1.25, 0)
 gray[gray < 0] = 0
 gray[gray > 255] = 255
 gray = np.uint8(gray)
@@ -34,7 +34,8 @@ aux[aux > 1] = 1
 gray = np.uint8((aux*0.5+0.5)*255)
 #_, gray = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
 #gray = cv2.Canny(gray, 127, 255)
-gray = cv2.Canny(gray, 75, 200)
+#gray = cv2.Canny(gray, 75, 200)
+gray = cv2.Canny(gray, 175, 200)
 
 # compute sobel
 sobel_x = cv2.Sobel(gray, cv2.CV_64F, 1, 0)
@@ -66,7 +67,7 @@ dens = np.uint8(dens*255)
 _, conts, _ = cv2.findContours(dens.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE) 
 for cont in conts:
     x, y, w, h = cv2.boundingRect(cont)
-    if w > 300 or w < 64 or h > 100 or h < 16:
+    if w > 300 or w < 32 or h > 100 or h < 16:
         continue
     if  w/h > 1 and w/h < 8:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), thickness=2)
