@@ -1,5 +1,5 @@
 {
-    "code", 0xA,                    // code number indicating the type of message
+    "type", 0xA,                    // code number indicating the type of message
                                     // inside of this message
                                     //
                                     // 0xA -> NORMAL message
