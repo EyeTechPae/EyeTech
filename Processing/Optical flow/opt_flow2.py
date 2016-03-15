@@ -5,7 +5,8 @@ import cv2
 from time import sleep
 import sys
 import functools as ft
-def locate(img, flow, step=64):
+import time
+def locate(img, flow, step=32):
 	#print(lines)
 	h, w = img.shape[:2]
 	y, x = np.mgrid[step/2:h:step, step/2:w:step].reshape(2,-1).astype(int)
@@ -16,14 +17,14 @@ def locate(img, flow, step=64):
 	for flowx in fx:
 		#print(flowx)
 		if abs(flowx)>1.5:
-			if flowx<0:
-				print("direccio correcte")
-			else:
-				print("va al reves!!")
+			#if flowx<0:
+				#print("direccio correcte")
+			#else:
+				#print("va al reves!!")
 			posx=x[i]
 			posy=y[i]
 			#print(posx,posy)
-			if posy>200 and posy<350:
+			if posy>100 and posy<200:
 				cv2.rectangle(vis,(posx,posy),(posx+20,posy+20),(0,0,255),2)
 		i=i+1
 
@@ -53,17 +54,17 @@ def getDisplacement(img, flow, step=16):
 	fx, fy = flow[y,x].T
 	#print(fx,fy)
 	return (ft.reduce(lambda x, y: x + y, fx) / len(fx), ft.reduce(lambda x, y: x + y, fy) / len(fy))
-
+t=time.time()
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-vc = cv2.VideoCapture('sample3.mp4')
-out = cv2.VideoWriter('output.avi',fourcc, 30.0, (720,480))
+vc = cv2.VideoCapture('sample4.mp4')
+out = cv2.VideoWriter('output.avi',fourcc, 30.0, (360,240))
 rval, prev = vc.read()
 prevgray = cv2.cvtColor(prev, cv2.COLOR_BGR2GRAY)
 show_hsv = False
 show_glitch = False
 cur_glitch = prev.copy()
 rval, img = vc.read()
-sk_frame = 2
+sk_frame = 0
 z=0;
 while rval:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -72,7 +73,7 @@ while rval:
         prevgray = gray
         #x, y = getDisplacement(gray, flow)
         #draw_img, lines=draw_flow(gray,flow)
-        print("es mou!!!")
+        #print("es mou!!!")
         draw_img = locate(gray,flow)
         #print(x,y)
         z=0;
@@ -86,4 +87,6 @@ while rval:
     
 vc.release()
 out.release()
+tend=time.time()-t
+print(tend)
 
