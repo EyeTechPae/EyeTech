@@ -7,26 +7,53 @@ import functools as ft
 import time
 import math
 
+def good_track(posx, posy):
+	
+
+	Z = np.vstack((posx,posy))
+	print(Z)
+	# convert to np.float32
+	Z = np.float32(Z)
+
+	# define criteria and apply kmeans()
+	criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
+	ret,label,center=cv2.kmeans(Z,2,None,criteria,10,cv2.KMEANS_PP_CENTERS)
+	#if center is not None:
+	#	print (center[:,0])
+	return center
 
 def calculateDistance(x1,y1,x2,y2):
      dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
      return dist
 
 
+def draw_centroids(img, center):
+	vis = img
+	pos = []
+	i = 0
+	for centroid in center:
+		pos.append(np.int32(centroid[0]))
+		i = i + 1
+		if i==2:
+			cv2.rectangle(vis,(pos[0],pos[1]),(pos[0]+20,pos[1]+20),(0,0,255),2)
+			del pos[:]
+			i = 0
+	return vis
+
 #Inicialització del lector i escriptor de vídeo, monitorització del temps d'execució i creació del background substractor
 t=time.time()
-cap = cv2.VideoCapture('vimeo1.mp4')
+cap = cv2.VideoCapture('prova_10min.mp4')
 t=time.time()
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output_bg.avi',fourcc, 30.0, (1280,720))
-outgray = cv2.VideoWriter('output_bg_gray.avi',fourcc,30.0, (1280,720),0)
+out = cv2.VideoWriter('output_bg.avi',fourcc, 15.0, (360,240))
+outgray = cv2.VideoWriter('output_bg_gray.avi',fourcc, 15.0, (360,240),0)
 fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=True)
 ret = True
 #element estructurant que utilitazrem per l'opening+closing per eliminar falsos positius (matriu quadrada de 8x8 píxels)
-kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(28,28))
-kernel_dilation = np.ones((53,53),np.uint8)
-
-
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(6,6))
+kernel_dilation = np.ones((8,8),np.uint8)
+posx=[]
+posy=[]
 while ret:
     
     #lectura i estimació del background
@@ -50,45 +77,32 @@ while ret:
         #CENTROIDS
 
         centres = []
+
         for i in range(len(contours)):
+            print(i)
             moments = cv2.moments(contours[i])
             centres.append((int(moments['m10']/moments['m00']), int(moments['m01']/moments['m00'])))
-            #print(centres[0][0])
+            print(centres[0][0])
             #cv2.circle(frame, centres[-1], 3, (0, 0, 0), -1)
             #print(contours)
-            if i>0:                
-                dist = calculateDistance(centres[i-1][0],centres[i-1][1],centres[i][0],centres[i][1])
-                #print (dist)
-                area=cv2.contourArea(contours[i])
-                prevarea=cv2.contourArea(contours[i-1])
-                if dist < 263 and area > 350:                   
+            if len(centres)>1:
+                for centre in centres:
+                    posx.append(centre[0])
+                    posy.append(centre[1])
+                bon_centre = good_track(posx, posy)
+                print (bon_centre)
+                frame = draw_centroids(frame, bon_centre)
+            
 
-                    if area > prevarea:
-                        
-                        rect = cv2.minAreaRect(contours[i])
-                        box = cv2.boxPoints(rect)
-                        box = np.int0(box)
-                        frame = cv2.drawContours(frame,[box],0,(0,0,255),2)
-                    else :
-                        
-                        rect = cv2.minAreaRect(contours[i-1])
-                        box = cv2.boxPoints(rect)
-                        box = np.int0(box)
-                        frame = cv2.drawContours(frame,[box],0,(0,0,255),2)
-            else:
-            #print(centres[0][0])
-                area=cv2.contourArea(contours[i])
-                rect = cv2.minAreaRect(contours[i])
-                box = cv2.boxPoints(rect)
-                box = np.int0(box)
-                frame = cv2.drawContours(frame,[box],0,(0,0,255),2)
 
         #print(area)
         #hull = cv2.convexHull(cnt)
         #if area < 100:
        # cv2.drawContours(frame, hull, -1, (0,255,0), 3)
 
-
+    #estimació del centroide
+    del posx[:]
+    del posy[:]
     out.write(frame)
     outgray.write(dilation)
     ret, frame = cap.read()
