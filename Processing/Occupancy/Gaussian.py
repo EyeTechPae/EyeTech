@@ -30,7 +30,15 @@ def isParked(gaussian, x, y):
         print("Car parked")
         return 1
 
-size=4
+size=10
 gaussian=makeGaussian(size, fwhm=3, center=None)
-print(gaussian)
-parked=isParked(gaussian, 3, 3)
+parked=isParked(gaussian, 2, 3)
+#gausstr=np.array2string(gaussian)
+#print(gaussian.max())
+"""
+for i in gaussian:
+    text_file=open("Output.txt", "w")
+    text_file.write(np.array2string(i))
+text_file.close()"""
+
+np.savetxt("output.txt", gaussian)
