@@ -26,34 +26,3 @@ def makeGaussian(sizeX, sizeY, fwhmx = 3, fwhmy=3,center=None):
 
     return ndimage.filters.gaussian_filter(gaussian, [fwhmx,fwhmy])
 
-
-def isParked(gaussian, x, y, threshold):
-    """Return 0 if car is considered not parked and viceversa"""
-     
-    if gaussian[x,y] < threshold:
-        print("Car not parked")
-        return 0
-    else:
-        print("Car parked")
-        return 1
-
-
-sizeX=100
-sizeY=100
-gaussian=makeGaussian(sizeX,sizeY, 15, 2, center=None)
-#parked=isParked(gaussian, 2, 3)
-fig = plt.figure()
-ax = fig.add_subplot(1,1,1)
-ax.set_aspect('equal')
-plt.imshow(gaussian, interpolation='nearest', cmap=plt.cm.ocean)
-plt.colorbar()
-plt.show()
-#gausstr=np.array2string(gaussian)
-#print(gaussian.max())
-"""
-for i in gaussian:
-    text_file=open("Output.txt", "w")
-    text_file.write(np.array2string(i))
-text_file.close()"""
-
-np.savetxt("output.txt", gaussian)
