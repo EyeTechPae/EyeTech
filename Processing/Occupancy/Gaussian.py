@@ -27,10 +27,10 @@ def makeGaussian(sizeX, sizeY, fwhmx = 3, fwhmy=3,center=None):
     return ndimage.filters.gaussian_filter(gaussian, [fwhmx,fwhmy])
 
 
-def isParked(gaussian, x, y):
+def isParked(gaussian, x, y, threshold):
     """Return 0 if car is considered not parked and viceversa"""
      
-    if gaussian[x,y] < 0.5:
+    if gaussian[x,y] < threshold:
         print("Car not parked")
         return 0
     else:
@@ -41,7 +41,7 @@ def isParked(gaussian, x, y):
 sizeX=100
 sizeY=100
 gaussian=makeGaussian(sizeX,sizeY, 15, 2, center=None)
-parked=isParked(gaussian, 2, 3)
+#parked=isParked(gaussian, 2, 3)
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
 ax.set_aspect('equal')
