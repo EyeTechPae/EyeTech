@@ -1,23 +1,30 @@
 import numpy as np
+from scipy.interpolate import griddata
+import matplotlib.pyplot as plt
+import numpy.ma as ma
+from numpy.random import uniform, seed
+from matplotlib import cm
+from scipy import ndimage
 
-def makeGaussian(size, fwhm = 3, center=None):
-    """ Make a square gaussian kernel.
+def makeGaussian(sizeX, sizeY, fwhmx = 3, fwhmy=3,center=None):
+    """ Make a rectangular gaussian kernel.
 
     size is the length of a side of the square
     fwhm is full-width-half-maximum, which
     can be thought of as an effective radius.
     """
 
-    x = np.arange(0, size, 1, float)
-    y = x[:,np.newaxis]
+    gaussian=np.zeros((sizeX,sizeY))
+    #x = np.arange(0, sizeX, 1, float)
+    #y = x[:,np.newaxis]
 
     if center is None:
-        x0 = y0 = size // 2
+       gaussian[sizeX // 2,sizeY // 2]= 1 # Delta 
     else:
-        x0 = center[0]
-        y0 = center[1]
+        gaussian[center[0],center[1]]= 1 # Delta
 
-    return np.exp(-4*np.log(2) * ((x-x0)**2 + (y-y0)**2) / fwhm**2)
+
+    return ndimage.filters.gaussian_filter(gaussian, [fwhmx,fwhmy])
 
 
 def isParked(gaussian, x, y):
@@ -30,9 +37,17 @@ def isParked(gaussian, x, y):
         print("Car parked")
         return 1
 
-size=10
-gaussian=makeGaussian(size, fwhm=3, center=None)
+
+sizeX=100
+sizeY=100
+gaussian=makeGaussian(sizeX,sizeY, 15, 2, center=None)
 parked=isParked(gaussian, 2, 3)
+fig = plt.figure()
+ax = fig.add_subplot(1,1,1)
+ax.set_aspect('equal')
+plt.imshow(gaussian, interpolation='nearest', cmap=plt.cm.ocean)
+plt.colorbar()
+plt.show()
 #gausstr=np.array2string(gaussian)
 #print(gaussian.max())
 """
