@@ -1,3 +1,4 @@
+import cv2
 class ParkingPlace(object):
 
 #Mask: path to ParkingPlace mask
