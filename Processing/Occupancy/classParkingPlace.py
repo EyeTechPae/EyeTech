@@ -9,7 +9,7 @@ class ParkingPlace(object):
     def getMask(self):
         self.mask=cv2.imread(mask, 0)
         return self.mask
-    def setOccupancy(state):
+    def setOccupancy(self, state):
         self.occupied = state
 
 """La classe càmera inicialitza les places amb la seva màscara.
