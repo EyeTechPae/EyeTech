@@ -1,10 +1,10 @@
 class ParkingPlace(object):
 
 #Mask: path to ParkingPlace mask
-    occupied=False
 
     def __init__(self, mask):
-        self.mask=mask  
+        self.mask=mask
+        self.occupied=False
 
     def getMask(self):
         self.mask=cv2.imread(mask, 0)
