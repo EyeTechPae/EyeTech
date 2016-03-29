@@ -3,12 +3,12 @@ class ParkingPlace(object):
 #Mask: path to ParkingPlace mask
 
     def __init__(self, mask):
-        self.mask=mask
+        self.im_mask=cv2.imread(mask, 0)
         self.occupied=False
 
     def getMask(self):
-        self.mask=cv2.imread(mask, 0)
-        return self.mask
+        return self.im_mask
+        
     def setOccupancy(self, state):
         self.occupied = state
 
