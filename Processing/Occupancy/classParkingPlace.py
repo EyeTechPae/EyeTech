@@ -9,9 +9,8 @@ class ParkingPlace(object):
         self.actualMask=None
 
     def getMask(self, frame):
-        
-        self.actualMask= frame*self.im_mask
-        self.actualMask = cv2.cvtColor(self.actualMask, cv2.COLOR_BGR2GRAY)
+        frame_mask = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        self.actualMask= frame_mask*self.im_mask
         return self.actualMask
         
     def setOccupancy(self, state):
