@@ -20,7 +20,7 @@ class ParkingPlace(object):
         cv2.imwrite('Placa.jpg',self.actualMask)
        
 
-    def setOccupancy(self, state):
+    def setOccupancyState(self, state):
         self.occupied = state
     
     def setMaskState(self):
