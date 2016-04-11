@@ -11,6 +11,7 @@ rval, frame = cap.read()
 
 parking= cPP.ParkingPlace('placa9.jpg', 2, 20)
 parking.setMask(frame)
+parking.setMaskState()
 rval, frame = cap.read()
 while rval:
 	if cont%30 is 0:
