@@ -22,20 +22,33 @@ class ParkingPlace(object):
 
     def setOccupancy(self, state):
         self.occupied = state
+    
+    def setMaskState(self):
+        self.maskState=self.occupied
 
     def checkOccupancy(self, frame):
         frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         frame_masked = frame_gray * self.im_mask
         kp, des= occ.computeSurfFeatures(frame_masked)
         good_matches = occ.computeGoodMatches(frame_masked, self.kp, self.des)
-        if good_matches > self.threshold:
-            self.setOccupancy(False)
-        else:
-            self.setOccupancy(True)
+        if not self.maskState:
+            if good_matches > self.threshold:
+                self.setOccupancy(False)
+            else:
+                self.setOccupancy(True)
             #self.actualMask= frame*self.im_mask
-            cv2.imwrite('Placa.jpg',frame_masked)
+                cv2.imwrite('Placa.jpg',frame_masked)
           #  self.setMask(frame)
-        print("Placa "+ str(self.ID) + " ocupada?" + str(self.occupied)+ " " + str(good_matches))
+            print("Placa "+ str(self.ID) + " ocupada?" + str(self.occupied)+ " " + str(good_matches))
+        if self.maskState:
+            if good_matches > self.threshold:
+                self.setOccupancy(True)
+            else:
+                self.setOccupancy(False)
+            #self.actualMask= frame*self.im_mask
+                cv2.imwrite('Placa.jpg',frame_masked)
+          #  self.setMask(frame)
+            print("Placa "+ str(self.ID) + " ocupada?" + str(self.occupied)+ " " + str(good_matches))
 
 """La classe càmera inicialitza les places amb la seva màscara.
 Per crear la màscara amb la placa de parking segmentada existeix el metode setMask.
