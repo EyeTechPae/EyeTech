@@ -7,6 +7,7 @@ class ParkingPlace(object):
     def __init__(self, mask, ID, threshold):
         self.im_mask=cv2.imread(mask, 0)
         self.occupied=False
+        self.maskState=self.occupied
         self.actualMask=None
         self.ID=ID
         self.threshold=threshold
