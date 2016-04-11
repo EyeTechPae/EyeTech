@@ -15,10 +15,13 @@ parking.setMaskState()
 rval, frame = cap.read()
 while rval:
 	if cont%30 is 0:
-		parking.checkOccupancy(frame)
+		parking.checkOccupancyState(frame)
 	cont=cont+1
 	cv2.imwrite('Video.jpg',frame)
 	rval, frame = cap.read()
+	if cont%1800 is 0:
+		parking.setMask(frame)
+		parking.setMaskState()
 
 cap.release()
 #out.release()
