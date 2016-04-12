@@ -1,0 +1,9 @@
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.Properties.Resources.resources
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.MainForm.resources
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.NewRegisterForm.resources
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.exe
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.pdb
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.exe
+c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.pdb
+C:\Users\User\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csprojResolveAssemblyReference.cache
