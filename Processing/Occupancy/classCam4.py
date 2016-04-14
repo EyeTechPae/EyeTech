@@ -1,3 +1,6 @@
+import cv2
+import d5_1 as camera4
+
 class Cam4(object):
 
 	def __init__(self, masks, ID, parksDown, parksUp):
@@ -10,16 +13,63 @@ class Cam4(object):
 		self.ID=ID
 
 	def isZoneIn(self): #override 
-		pass#TODO
+		frame_applied= frame*self.masks[0]		
+		fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=True)
+		ret = True
+		str_open, str_dila = camera4.get_strelements(28,53)
+		fgmask = fgbg.apply(frame_applied)
+		img = camera4.operacions_morfologiques(fgmask, str_open, str_dila)
+		contours = camera4.get_contours (img)
+		centres, frame_applied = camera4.get_centroids (contours, frame_applied)
+		if len(centres)>0:
+			return True
+		else:
+			return False
 
 	def isZoneOut(self):  #override 
-		pass#TODO
+		frame_applied= frame*self.masks[1]		
+		fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=True)
+		ret = True
+		str_open, str_dila = camera4.get_strelements(28,53)
+		fgmask = fgbg.apply(frame_applied)
+		img = camera4.operacions_morfologiques(fgmask, str_open, str_dila)
+		contours = camera4.get_contours (img)
+		centres, frame_applied = camera4.get_centroids (contours, frame_applied)
+		if len(centres)>0:
+			return True
+		else:
+			return False
+
 
 	def isParkingDown(self): #override 
-		pass#TODO
+		frame_applied= frame*self.masks[2]		
+		fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=True)
+		ret = True
+		str_open, str_dila = camera4.get_strelements(28,53)
+		fgmask = fgbg.apply(frame_applied)
+		img = camera4.operacions_morfologiques(fgmask, str_open, str_dila)
+		contours = camera4.get_contours (img)
+		centres, frame_applied = camera4.get_centroids (contours, frame_applied)
+		if len(centres)>0:
+			return True
+		else:
+			return False
+
 
 	def isParkingUp(self): #override 
-		pass#TODO
+		frame_applied= frame*self.masks[3]		
+		fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=True)
+		ret = True
+		str_open, str_dila = camera4.get_strelements(28,53)
+		fgmask = fgbg.apply(frame_applied)
+		img = camera4.operacions_morfologiques(fgmask, str_open, str_dila)
+		contours = camera4.get_contours (img)
+		centres, frame_applied = camera4.get_centroids (contours, frame_applied)
+		if len(centres)>0:
+			return True
+		else:
+			return False
+
 
 	def checkCamState(self): #override 
 
