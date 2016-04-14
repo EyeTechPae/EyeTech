@@ -1,8 +1,6 @@
-from abc import ABCMeta, abstractmethod
+class Cam2(object):
 
-class Cam2(Cam):
- """ Masks order: Mask In, Mask Out, Mask Parking Up, Mask Parking Down"""
-	def __init__(self, masks, ID, parksUp, parksDown):
+	def __init__(self, masks, ID, parksDown, parksUp):
 		for mask,index in zip(masks, range(len(masks))):
 			self.masks[index]=cv2.imread(mask, 0)
 		for parkUp, index in zip(parksUp, range(len(parksUp))):
@@ -12,16 +10,16 @@ class Cam2(Cam):
 		self.ID=ID
 
 	def isZoneIn(self): #override 
-		#TODO
+		pass#TODO
 
 	def isZoneOut(self):  #override 
-		#TODO
+		pass#TODO
 
 	def isParkingDown(self): #override 
-		#TODO
+		pass#TODO
 
 	def isParkingUp(self): #override 
-		#TODO
+		pass#TODO
 
 	def checkCamState(self): #override 
 
@@ -32,9 +30,3 @@ class Cam2(Cam):
 		if isParkingUp():
 			for parkUp in self.parksUp:
 				parkUp.checkOccupancyState()
-
-
-
-
-
-
