@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="LicensePlateDatabase.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainForm.cs">
+    <Files>
+      <File FileName="MainForm.cs" Line="12" Column="24" />
+      <File FileName="MainForm.Designer.cs" Line="320" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -21,7 +21,7 @@ namespace LicensePlateDatabase
             InitializeComponent();
             filtersBox.SelectedIndex = 2;
             DateTime nowtime = DateTime.Now;
-            this.pickDate.Text = this.pickDate2.Text = nowtime.Date.ToString();
+			this.pickDate.Value = this.pickDate2.Value = nowtime.Date;
             this.pickHour.Text = nowtime.Hour.ToString();
             this.pickHour2.Text = (nowtime.Hour +1).ToString();
             this.pickMin.Text = this.pickMin2.Text = nowtime.Minute.ToString();

@@ -60,4 +60,9 @@
     <DateTime>11/04/2016 18:14:39</DateTime>
     <INOUT>OUT</INOUT>
   </Action>
+  <Action>
+    <LicensePlate>89348 DJJ</LicensePlate>
+    <DateTime>13/04/2016 13:30:38</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
 </Register>

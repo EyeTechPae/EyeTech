@@ -1,0 +1,8 @@
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/obj/x86/Debug/LicensePlateDatabase.MainForm.resources
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/obj/x86/Debug/LicensePlateDatabase.NewRegisterForm.resources
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/obj/x86/Debug/LicensePlateDatabase.Properties.Resources.resources
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/bin/Debug/LicensePlateDatabase.exe.mdb
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/bin/Debug/LicensePlateDatabase.exe
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/obj/x86/Debug/LicensePlateDatabase.exe
+/home/nacho/Descargas/LicensePlateDatabase/LicensePlateDatabase/obj/x86/Debug/LicensePlateDatabase.exe.mdb

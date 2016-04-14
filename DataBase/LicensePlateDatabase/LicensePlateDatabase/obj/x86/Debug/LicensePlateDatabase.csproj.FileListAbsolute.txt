@@ -7,3 +7,12 @@ c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\License
 c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.exe
 c:\users\user\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.pdb
 C:\Users\User\documents\visual studio 2010\Projects\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csprojResolveAssemblyReference.cache
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.exe
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.pdb
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csprojResolveAssemblyReference.cache
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.MainForm.resources
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.NewRegisterForm.resources
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.Properties.Resources.resources
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csproj.GenerateResource.Cache
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.exe
+C:\Users\ireimat\Desktop\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.pdb
