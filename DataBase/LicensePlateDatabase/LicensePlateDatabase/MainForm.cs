@@ -27,12 +27,6 @@ namespace LicensePlateDatabase
             this.pickMin.Text = this.pickMin2.Text = nowtime.Minute.ToString();
         }
 
-        private void NewRegister(object sender, EventArgs e)
-        {
-            NewRegisterForm registerForm = new NewRegisterForm();
-            registerForm.ShowDialog();
-        }
-
         private void filtersBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (filtersBox.SelectedIndex == 0)
@@ -181,6 +175,26 @@ namespace LicensePlateDatabase
             {
                 MessageBox.Show("Input document '" + historicFilePath + "' seems to be corrupt. Exception: " + e.ToString());
             }
+        }
+
+        private void NewRegister(object sender, EventArgs e)
+        {
+            NewRegisterForm registerForm = new NewRegisterForm();
+            registerForm.ShowDialog();
+        }
+
+        private void CloseApp(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void About(object sender, EventArgs e)
+        {
+            string aboutText = "LicensePlate Database has been developed by Eye-Tech company as a complement to the ParKing project. \n \n Visit us in eye-tech.orgfree.com";
+            string titleText = "  About LicensePlate Database : ";
+            MessageBoxButtons button = MessageBoxButtons.OK;
+            MessageBoxIcon icon = MessageBoxIcon.Information;
+            MessageBox.Show(aboutText, titleText, button, icon);
         }
 
     }
