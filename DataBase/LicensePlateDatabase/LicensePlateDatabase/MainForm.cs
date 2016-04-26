@@ -203,7 +203,15 @@ namespace LicensePlateDatabase
         {
             //IPEndPoint ipe = new IPEndPoint(new IPAddress([123,324,21,23]), 8080);
             //Socket sk= new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-            AsynchronousClient.StartConnection();
+			try
+			{
+				AsynchronousClient.StartConnection();
+			}
+			catch (Exception ex)
+			{
+				
+				Console.WriteLine(ex.StackTrace);
+			} 
         }
 
     }

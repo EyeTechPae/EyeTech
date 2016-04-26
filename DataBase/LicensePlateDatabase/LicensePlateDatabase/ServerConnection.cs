@@ -42,9 +42,9 @@ namespace LicensePlateDatabase
             try
             {
                 // Establish the remote endpoint for the socket.
-                IPHostEntry ipHostInfo = Dns.GetHostEntry(ipadress);
-                IPAddress ipAddress = ipHostInfo.AddressList[0];
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
+				//IPHostEntry ipHostInfo = Dns.GetHostEntry(ipadress);
+				//IPAddress ipAddress = ipHostInfo.AddressList[0];
+				IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse(ipadress), port);
 
                 // Create a TCP/IP socket.
                 Socket client = new Socket(AddressFamily.InterNetwork,
