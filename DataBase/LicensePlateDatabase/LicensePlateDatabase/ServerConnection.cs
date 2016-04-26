@@ -21,7 +21,7 @@ namespace LicensePlateDatabase
     public class AsynchronousClient
     {
         // The port number for the remote device.
-        private const int port = 80;
+        private const int port = 5555;
 
         // ManualResetEvent instances signal completion.
         private static ManualResetEvent connectDone =
