@@ -21,7 +21,7 @@ namespace LicensePlateDatabase
     public class AsynchronousClient
     {
         // The port number for the remote device.
-        private const int port = 11000;
+        private const int port = 80;
 
         // ManualResetEvent instances signal completion.
         private static ManualResetEvent connectDone =
@@ -37,7 +37,7 @@ namespace LicensePlateDatabase
         private static void StartClient()
         {
             
-            string ipadress = "sdsd";
+            string ipadress = "46.101.132.172";
             // Connect to a remote device.
             try
             {
