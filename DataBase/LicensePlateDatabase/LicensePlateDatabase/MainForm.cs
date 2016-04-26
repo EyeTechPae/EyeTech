@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 
 namespace LicensePlateDatabase
 {
@@ -195,6 +197,13 @@ namespace LicensePlateDatabase
             MessageBoxButtons button = MessageBoxButtons.OK;
             MessageBoxIcon icon = MessageBoxIcon.Information;
             MessageBox.Show(aboutText, titleText, button, icon);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //IPEndPoint ipe = new IPEndPoint(new IPAddress([123,324,21,23]), 8080);
+            //Socket sk= new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            AsynchronousClient.StartConnection();
         }
 
     }

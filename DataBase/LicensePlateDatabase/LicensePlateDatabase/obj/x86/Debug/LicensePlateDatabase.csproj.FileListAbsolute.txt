@@ -25,3 +25,12 @@ C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\Li
 C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.NewRegisterForm.resources
 C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.Properties.Resources.resources
 C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csproj.GenerateResource.Cache
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.exe
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.pdb
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.exe
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.pdb
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csprojResolveAssemblyReference.cache
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.MainForm.resources
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.NewRegisterForm.resources
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.Properties.Resources.resources
+C:\Users\paesa115\Desktop\EyeTech-master\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csproj.GenerateResource.Cache
