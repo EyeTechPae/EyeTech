@@ -205,13 +205,20 @@ namespace LicensePlateDatabase
             //Socket sk= new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 			try
 			{
-				AsynchronousClient.StartConnection();
+				//AsynchronousClient.StartConnection();
+                HttpWebRequest_Connection.Read();
 			}
 			catch (Exception ex)
 			{
 				
 				Console.WriteLine(ex.StackTrace);
 			} 
+        }
+
+        private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string message = "La versió 2.0 de l'aplicació ja està disponible. Li recomanem que l'actualitzi ben aviat! ;)";
+            AsynchronousClient.SendMessage(message);
         }
 
     }
