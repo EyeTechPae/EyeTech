@@ -52,3 +52,4 @@ C:\Users\ireimat\Documents\DataBase\LicensePlateDatabase\LicensePlateDatabase\ob
 C:\Users\ireimat\Documents\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.csproj.GenerateResource.Cache
 C:\Users\ireimat\Documents\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.exe
 C:\Users\ireimat\Documents\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\LicensePlateDatabase.pdb
+C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\obj\x86\Debug\LicensePlateDatabase.SendMessageForm.resources

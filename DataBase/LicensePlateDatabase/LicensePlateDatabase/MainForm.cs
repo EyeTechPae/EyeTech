@@ -179,12 +179,6 @@ namespace LicensePlateDatabase
             }
         }
 
-        private void NewRegister(object sender, EventArgs e)
-        {
-            NewRegisterForm registerForm = new NewRegisterForm();
-            registerForm.ShowDialog();
-        }
-
         private void CloseApp(object sender, EventArgs e)
         {
             this.Close();
@@ -217,8 +211,14 @@ namespace LicensePlateDatabase
 
         private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string message = "La versió 2.0 de l'aplicació ja està disponible. Li recomanem que l'actualitzi ben aviat! ;)";
-            AsynchronousClient.SendMessage(message);
+            SendMessageForm sendMessageForm = new SendMessageForm();
+            sendMessageForm.ShowDialog();
+        }
+
+        private void NewRegister(object sender, EventArgs e)
+        {
+            NewRegisterForm registerForm = new NewRegisterForm();
+            registerForm.ShowDialog();
         }
 
     }
