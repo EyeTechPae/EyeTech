@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Register>
+  <Action>
+    <LicensePlate>6878 HSJ</LicensePlate>
+    <DateTime>11/04/2016 18:06:02</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>9484 KSB</LicensePlate>
+    <DateTime>11/04/2016 18:06:48</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>0348 BDH</LicensePlate>
+    <DateTime>11/04/2016 18:07:46</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>7482 SJH</LicensePlate>
+    <DateTime>11/04/2016 18:08:48</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>0348 BDH</LicensePlate>
+    <DateTime>11/04/2016 18:09:13</DateTime>
+    <INOUT>OUT</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>3894 ENK</LicensePlate>
+    <DateTime>11/04/2016 18:09:48</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>9484 KSB</LicensePlate>
+    <DateTime>11/04/2016 18:10:14</DateTime>
+    <INOUT>OUT</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>6878 HSJ</LicensePlate>
+    <DateTime>11/04/2016 18:11:01</DateTime>
+    <INOUT>OUT</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>2399 MNB</LicensePlate>
+    <DateTime>11/04/2016 18:11:40</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>3894 ENK</LicensePlate>
+    <DateTime>11/04/2016 18:12:28</DateTime>
+    <INOUT>OUT</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>2399 MNB</LicensePlate>
+    <DateTime>11/04/2016 18:13:18</DateTime>
+    <INOUT>OUT</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>7482 SJH</LicensePlate>
+    <DateTime>11/04/2016 18:14:39</DateTime>
+    <INOUT>OUT</INOUT>
+  </Action>
+  <Action>
+    <LicensePlate>89348 DJJ</LicensePlate>
+    <DateTime>13/04/2016 13:30:38</DateTime>
+    <INOUT>IN</INOUT>
+  </Action>
+</Register>

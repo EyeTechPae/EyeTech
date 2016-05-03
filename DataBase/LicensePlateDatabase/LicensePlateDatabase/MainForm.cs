@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Text.RegularExpressions;
 
 namespace LicensePlateDatabase
 {
@@ -200,7 +201,11 @@ namespace LicensePlateDatabase
 			try
 			{
 				//AsynchronousClient.StartConnection();
-                HttpWebRequest_Connection.Read();
+                //HttpWebRequest_Connection.Read();
+                String response=AsynchronousClient.ReceiveXML();
+                //Regex regex = new Regex("\n");
+                //String[] lines = regex.Split(response);
+                //System.IO.File.WriteAllLines(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\prueba.xml", lines);
 			}
 			catch (Exception ex)
 			{

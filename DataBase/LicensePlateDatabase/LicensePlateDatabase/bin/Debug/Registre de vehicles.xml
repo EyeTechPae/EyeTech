@@ -1,68 +1,208 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Register>
-  <Action>
-    <LicensePlate>6878 HSJ</LicensePlate>
-    <DateTime>11/04/2016 18:06:02</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>9484 KSB</LicensePlate>
-    <DateTime>11/04/2016 18:06:48</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>0348 BDH</LicensePlate>
-    <DateTime>11/04/2016 18:07:46</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>7482 SJH</LicensePlate>
-    <DateTime>11/04/2016 18:08:48</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>0348 BDH</LicensePlate>
-    <DateTime>11/04/2016 18:09:13</DateTime>
-    <INOUT>OUT</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>3894 ENK</LicensePlate>
-    <DateTime>11/04/2016 18:09:48</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>9484 KSB</LicensePlate>
-    <DateTime>11/04/2016 18:10:14</DateTime>
-    <INOUT>OUT</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>6878 HSJ</LicensePlate>
-    <DateTime>11/04/2016 18:11:01</DateTime>
-    <INOUT>OUT</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>2399 MNB</LicensePlate>
-    <DateTime>11/04/2016 18:11:40</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>3894 ENK</LicensePlate>
-    <DateTime>11/04/2016 18:12:28</DateTime>
-    <INOUT>OUT</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>2399 MNB</LicensePlate>
-    <DateTime>11/04/2016 18:13:18</DateTime>
-    <INOUT>OUT</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>7482 SJH</LicensePlate>
-    <DateTime>11/04/2016 18:14:39</DateTime>
-    <INOUT>OUT</INOUT>
-  </Action>
-  <Action>
-    <LicensePlate>89348 DJJ</LicensePlate>
-    <DateTime>13/04/2016 13:30:38</DateTime>
-    <INOUT>IN</INOUT>
-  </Action>
+<Action>
+<LicensePlate>7388HMW</LicensePlate>
+<DateTime>03/05/2016 07:58:39</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>7388HMW</LicensePlate>
+<DateTime>03/05/2016 07:58:39</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>6273RQN</LicensePlate>
+<DateTime>03/05/2016 07:58:40</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>6273RQN</LicensePlate>
+<DateTime>03/05/2016 07:58:40</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>8458PAA</LicensePlate>
+<DateTime>03/05/2016 07:58:41</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>8458PAA</LicensePlate>
+<DateTime>03/05/2016 07:58:41</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>4479GEU</LicensePlate>
+<DateTime>03/05/2016 07:58:42</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>8034IZL</LicensePlate>
+<DateTime>03/05/2016 07:58:42</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>8843RRA</LicensePlate>
+<DateTime>03/05/2016 07:58:43</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>4479GEU</LicensePlate>
+<DateTime>03/05/2016 07:58:43</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>8034IZL</LicensePlate>
+<DateTime>03/05/2016 07:58:44</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>8843RRA</LicensePlate>
+<DateTime>03/05/2016 07:58:44</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>2300VGM</LicensePlate>
+<DateTime>03/05/2016 07:58:45</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>5482YKM</LicensePlate>
+<DateTime>03/05/2016 07:58:45</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>7481HVH</LicensePlate>
+<DateTime>03/05/2016 07:58:46</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>2300VGM</LicensePlate>
+<DateTime>03/05/2016 07:58:46</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>2199LKP</LicensePlate>
+<DateTime>03/05/2016 07:58:47</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>5482YKM</LicensePlate>
+<DateTime>03/05/2016 07:58:47</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>3731FDV</LicensePlate>
+<DateTime>03/05/2016 07:58:48</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>8546CVD</LicensePlate>
+<DateTime>03/05/2016 07:58:48</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>6904XSJ</LicensePlate>
+<DateTime>03/05/2016 07:58:49</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>7481HVH</LicensePlate>
+<DateTime>03/05/2016 07:58:49</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>1196CQO</LicensePlate>
+<DateTime>03/05/2016 07:58:50</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>2199LKP</LicensePlate>
+<DateTime>03/05/2016 07:58:50</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>3731FDV</LicensePlate>
+<DateTime>03/05/2016 07:58:51</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>8546CVD</LicensePlate>
+<DateTime>03/05/2016 07:58:51</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>6904XSJ</LicensePlate>
+<DateTime>03/05/2016 07:58:52</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>1196CQO</LicensePlate>
+<DateTime>03/05/2016 07:58:52</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>4906PBX</LicensePlate>
+<DateTime>03/05/2016 07:58:53</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>4906PBX</LicensePlate>
+<DateTime>03/05/2016 07:58:53</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>9109JJG</LicensePlate>
+<DateTime>03/05/2016 07:58:54</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>3095GPU</LicensePlate>
+<DateTime>03/05/2016 07:58:54</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>0507FVG</LicensePlate>
+<DateTime>03/05/2016 07:58:55</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>8824NHN</LicensePlate>
+<DateTime>03/05/2016 07:58:55</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>9109JJG</LicensePlate>
+<DateTime>03/05/2016 07:58:56</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>9203UVD</LicensePlate>
+<DateTime>03/05/2016 07:58:56</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>8931YEX</LicensePlate>
+<DateTime>03/05/2016 07:58:57</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>0244BQP</LicensePlate>
+<DateTime>03/05/2016 07:58:57</DateTime>
+<INOUT>IN</INOUT>
+</Action>
+<Action>
+<LicensePlate>3095GPU</LicensePlate>
+<DateTime>03/05/2016 07:58:58</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>0507FVG</LicensePlate>
+<DateTime>03/05/2016 07:58:58</DateTime>
+<INOUT>OUT</INOUT>
+</Action>
+<Action>
+<LicensePlate>9257NEH</LicensePlate>
+<DateTime>03/05/2016 07:58:59</DateTime>
+<INOUT>IN</INOUT>
+</Action>
 </Register>

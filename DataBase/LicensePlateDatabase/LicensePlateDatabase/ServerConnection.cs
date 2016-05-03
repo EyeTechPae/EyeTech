@@ -22,8 +22,6 @@ namespace LicensePlateDatabase
     public class AsynchronousClient
     {
         // The port number for the remote device.
-        private const int port = 3335;
-
         // ManualResetEvent instances signal completion.
         private static ManualResetEvent connectDone =
             new ManualResetEvent(false);
@@ -39,6 +37,7 @@ namespace LicensePlateDatabase
         {
             
             string ipadress = "46.101.132.172";
+            int port = 3333;
             // Connect to a remote device.
             try
             {
@@ -136,6 +135,7 @@ namespace LicensePlateDatabase
                     // There might be more data, so store the data received so far.
                     state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
                     string rec = Encoding.ASCII.GetString(state.buffer, 0, bytesRead);
+                    System.IO.File.AppendAllText(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\Registre de vehicles.xml", rec, Encoding.UTF8);
                     // Get the rest of the data.
                     client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
                         new AsyncCallback(ReceiveCallback), state);
@@ -150,6 +150,43 @@ namespace LicensePlateDatabase
                     // Signal that all bytes have been received.
                     receiveDone.Set();
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+        }
+
+        private static void ReceiveCallbackBo(IAsyncResult ar)
+        {
+            try
+            {
+                // Retrieve the state object and the client socket 
+                // from the asynchronous state object.
+                StateObject state = (StateObject)ar.AsyncState;
+                Socket client = state.workSocket;
+
+                // Read data from the remote device.
+                int bytesRead = client.EndReceive(ar);
+
+                while (bytesRead > 0)
+                {
+                    // There might be more data, so store the data received so far.
+                    state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
+                    string rec = Encoding.ASCII.GetString(state.buffer, 0, bytesRead);
+                    System.IO.File.AppendAllText(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\prueba.xml", rec, Encoding.UTF8);
+                    // Get the rest of the data.
+                    state = (StateObject)ar.AsyncState;
+                    client = state.workSocket;
+                    bytesRead = client.EndReceive(ar);
+                }
+                    // All the data has arrived; put it in response.
+                    if (state.sb.Length > 1)
+                    {
+                        response = state.sb.ToString();
+                    }
+                    // Signal that all bytes have been received.
+                    receiveDone.Set();
             }
             catch (Exception e)
             {
@@ -196,6 +233,7 @@ namespace LicensePlateDatabase
         public static int SendMessage(string message)
         {
             string ipadress = "46.101.132.172";
+            int port = 3335;
             // Connect to a remote device.
             try
             {
@@ -221,6 +259,46 @@ namespace LicensePlateDatabase
             {
                 Console.WriteLine(e.ToString());
                 return 0;
+            }
+        }
+
+        public static string ReceiveXML()
+        {
+            string ipadress = "46.101.132.172";
+            int port = 3333;
+            // Connect to a remote device.
+            try
+            {
+                IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse(ipadress), port);
+
+                // Create a TCP/IP socket.
+                Socket client = new Socket(AddressFamily.InterNetwork,
+                    SocketType.Stream, ProtocolType.Tcp);
+
+                // Connect to the remote endpoint.
+                client.BeginConnect(remoteEP,
+                    new AsyncCallback(ConnectCallback), client);
+                connectDone.WaitOne();
+                File.Delete(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\Registre de vehicles.xml");
+                //// Receive the response from the remote device.
+                Receive(client);
+                receiveDone.WaitOne();
+
+                //// Write the response to the console.
+                //Console.WriteLine("Response received : {0}", response);
+                //Send(client, "Received");
+
+                // Release the socket.
+                client.Shutdown(SocketShutdown.Both);
+                client.Close();
+                return response;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Algo ha fallado");
+                Console.WriteLine(e.ToString());
+                return null;
             }
         }
     }
