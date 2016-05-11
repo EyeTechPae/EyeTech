@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Text;
 using System.IO;
+using System.Windows.Forms;
 
 namespace LicensePlateDatabase
 {
@@ -135,7 +136,7 @@ namespace LicensePlateDatabase
                     // There might be more data, so store the data received so far.
                     state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
                     string rec = Encoding.ASCII.GetString(state.buffer, 0, bytesRead);
-                    System.IO.File.AppendAllText(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\Registre de vehicles.xml", rec, Encoding.UTF8);
+                    System.IO.File.AppendAllText("Registre de vehicles.xml", rec, Encoding.UTF8);
                     // Get the rest of the data.
                     client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
                         new AsyncCallback(ReceiveCallback), state);
@@ -150,43 +151,6 @@ namespace LicensePlateDatabase
                     // Signal that all bytes have been received.
                     receiveDone.Set();
                 }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-        }
-
-        private static void ReceiveCallbackBo(IAsyncResult ar)
-        {
-            try
-            {
-                // Retrieve the state object and the client socket 
-                // from the asynchronous state object.
-                StateObject state = (StateObject)ar.AsyncState;
-                Socket client = state.workSocket;
-
-                // Read data from the remote device.
-                int bytesRead = client.EndReceive(ar);
-
-                while (bytesRead > 0)
-                {
-                    // There might be more data, so store the data received so far.
-                    state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
-                    string rec = Encoding.ASCII.GetString(state.buffer, 0, bytesRead);
-                    System.IO.File.AppendAllText(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\prueba.xml", rec, Encoding.UTF8);
-                    // Get the rest of the data.
-                    state = (StateObject)ar.AsyncState;
-                    client = state.workSocket;
-                    bytesRead = client.EndReceive(ar);
-                }
-                    // All the data has arrived; put it in response.
-                    if (state.sb.Length > 1)
-                    {
-                        response = state.sb.ToString();
-                    }
-                    // Signal that all bytes have been received.
-                    receiveDone.Set();
             }
             catch (Exception e)
             {
@@ -279,7 +243,17 @@ namespace LicensePlateDatabase
                 client.BeginConnect(remoteEP,
                     new AsyncCallback(ConnectCallback), client);
                 connectDone.WaitOne();
-                File.Delete(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\bin\Debug\Registre de vehicles.xml");
+                try
+                {
+                    //guardamos una copia del archivo por si falla algo
+                    File.Copy("Registre de vehicles.xml", "Registre de vehicles - last.xml", true);
+                    File.Delete("Registre de vehicles.xml");
+                }
+                catch (Exception fi)
+                {
+                    Console.WriteLine(fi.ToString());
+                }
+                
                 //// Receive the response from the remote device.
                 Receive(client);
                 receiveDone.WaitOne();
@@ -291,6 +265,15 @@ namespace LicensePlateDatabase
                 // Release the socket.
                 client.Shutdown(SocketShutdown.Both);
                 client.Close();
+                try
+                {
+                    //borramos el archivo copia
+                    File.Delete("Registre de vehicles - last.xml");
+                }
+                catch (Exception fi)
+                {
+                    Console.WriteLine(fi.ToString());
+                }
                 return response;
 
             }
@@ -298,6 +281,18 @@ namespace LicensePlateDatabase
             {
                 Console.WriteLine("Algo ha fallado");
                 Console.WriteLine(e.ToString());
+                //Recuperamos el archivo anterior
+                try
+                {
+                    File.Copy("Registre de vehicles - last.xml", "Registre de vehicles.xml", true);
+                    File.Delete("Registre de vehicles - last.xml");
+                }
+                catch (Exception fi)
+                {
+                    Console.WriteLine(fi.ToString());
+                }
+
+                MessageBox.Show(e.Message.ToString());
                 return null;
             }
         }

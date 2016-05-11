@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action.cs" />
+    <Compile Include="StartingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingForm.designer.cs">
+      <DependentUpon>StartingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SendMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="StartingForm.resx">
+      <DependentUpon>StartingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SendMessageForm.resx">
       <DependentUpon>SendMessageForm.cs</DependentUpon>
     </EmbeddedResource>

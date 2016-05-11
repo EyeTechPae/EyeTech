@@ -18,7 +18,7 @@ namespace LicensePlateDatabase
     {
         private String historicFilePath = "Registre de vehicles.xml";
         private DateTime startDate, endDate;
-        
+
         public MainForm()
         {
             InitializeComponent();
@@ -196,20 +196,14 @@ namespace LicensePlateDatabase
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //IPEndPoint ipe = new IPEndPoint(new IPAddress([123,324,21,23]), 8080);
-            //Socket sk= new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 			try
 			{
-				//AsynchronousClient.StartConnection();
-                //HttpWebRequest_Connection.Read();
-                String response=AsynchronousClient.ReceiveXML();
-                //Regex regex = new Regex("\n");
-                //String[] lines = regex.Split(response);
-                //System.IO.File.WriteAllLines(@"C:\Users\User\Documents\Universitat\PAE\EyeTech\DataBase\LicensePlateDatabase\LicensePlateDatabase\prueba.xml", lines);
+                updatingBox.Visible = true;
+                String response = AsynchronousClient.ReceiveXML();
+                updatingBox.Visible = false;
 			}
 			catch (Exception ex)
 			{
-				
 				Console.WriteLine(ex.StackTrace);
 			} 
         }
